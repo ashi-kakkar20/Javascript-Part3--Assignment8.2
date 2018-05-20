@@ -1,0 +1,27 @@
+<!-- This assignment helps to master the concepts of JavaScript functions and callbacks -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment8.2</title>
+</head>
+<body>
+    <script> //Js code logic
+        function prepareFood(tableNumber, items, callback) {
+            console.log('preparing food for items - ', items);
+            callback(tableNumber, items); //callback method is called after the food is prepared
+        }
+
+        function serveFood(tableNumber, items) {
+            console.log('serving food for items - ', items);
+
+        }
+
+        var tableNumber = 22;
+        var items = ["Burger", "pasta", "coke"];
+        prepareFood(tableNumber, items, serveFood);
+    </script>
+</body>
+</html>
